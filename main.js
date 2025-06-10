@@ -9,8 +9,11 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js'),
     },
   });
-
+  
+  console.log("Loading Vite Dev Server...");
   win.loadURL('http://localhost:5173'); // Vite dev server
+  win.webContents.openDevTools();
+
 }
 
 app.whenReady().then(() => {
