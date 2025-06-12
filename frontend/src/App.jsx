@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
   const [filePath, setFilePath] = useState('')
   const [message, setMessage] = useState('')
 
@@ -24,36 +23,26 @@ function App() {
     }
   }
 
+  const handleSelectFile = async () => {
+    const path = await window.electron.selectFile();
+    setFilePath(path);
+  };
+
+  const handleFunction = (fnNumber) => {
+    alert(`Function ${fnNumber} clicked for file:\n${filePath}`);
+    // Later: send path and fnNumber to Python backend
+  };
+
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Excel Tool</h1>
       <button onClick={handleSelectFile}>Select Excel File</button>
       {filePath && <p>Selected file: {filePath}</p>}
-      <div style={{ marginTop: '1rem' }}>
-        <button onClick={() => handleFunction(1)}>Function 1</button>
-        <button onClick={() => handleFunction(2)}>Function 2</button>
-        <button onClick={() => handleFunction(3)}>Function 3</button>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((c) => c + 1)}>count is {count}</button>
-        <div style={{ marginTop: '1rem' }}>
-          <input
-            placeholder="Excel file path"
-            value={filePath}
-            onChange={(e) => setFilePath(e.target.value)}
-            style={{ width: '300px' }}
-          />
-          <div style={{ marginTop: '0.5rem' }}>
+      <div style={{ marginTop: '0.5rem' }}>
             <button onClick={() => callApi('extract')}>Extract IO List</button>
             <button onClick={() => callApi('convert')} style={{ marginLeft: '0.5rem' }}>Convert to CSV</button>
-          </div>
-        </div>
-        <p>{message}</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p>{message}</p>
     </div>
   )
 }

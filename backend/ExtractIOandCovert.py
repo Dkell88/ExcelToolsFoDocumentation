@@ -251,92 +251,92 @@ def create_rack_list_csv(output_dir, filenames):
         traceback.print_exc()
         return None
 
-def main():
-    """Main function that handles command line arguments and user interaction"""
-    # Display welcome message
-    print("Excel File Processor")
-    print("-------------------")
-    print("1. Extract IO List from Excel file")
-    print("2. Convert Excel worksheets to CSV files")
-    print("3. Extract IO List and then convert to CSV")
-    print("4. Exit")
+# def main():
+#     """Main function that handles command line arguments and user interaction"""
+#     # Display welcome message
+#     print("Excel File Processor")
+#     print("-------------------")
+#     print("1. Extract IO List from Excel file")
+#     print("2. Convert Excel worksheets to CSV files")
+#     print("3. Extract IO List and then convert to CSV")
+#     print("4. Exit")
     
-    choice = input("\nEnter your choice (1-4): ")
+#     choice = input("\nEnter your choice (1-4): ")
     
-    if choice == "4":
-        print("Exiting program.")
-        sys.exit(0)
+#     if choice == "4":
+#         print("Exiting program.")
+#         sys.exit(0)
     
-    # Get input file
-    if len(sys.argv) > 1:
-        input_file = sys.argv[1]
-    else:
-        input_file = input("\nEnter the path to the Excel file: ")
+#     # Get input file
+#     if len(sys.argv) > 1:
+#         input_file = sys.argv[1]
+#     else:
+#         input_file = input("\nEnter the path to the Excel file: ")
     
-    # Check if file exists
-    if not os.path.exists(input_file):
-        print("File not found. Please check the file path.")
-        return
+#     # Check if file exists
+#     if not os.path.exists(input_file):
+#         print("File not found. Please check the file path.")
+#         return
     
-    # Process based on user choice
-    if choice == "1":
-        # Extract IO List only
-        output_file = extract_io_list(input_file)
-        if output_file:
-            print(f"\nProcess completed. Output saved to {output_file}")
-        else:
-            print("\nProcess failed. Please check the errors above.")
+#     # Process based on user choice
+#     if choice == "1":
+#         # Extract IO List only
+#         output_file = extract_io_list(input_file)
+#         if output_file:
+#             print(f"\nProcess completed. Output saved to {output_file}")
+#         else:
+#             print("\nProcess failed. Please check the errors above.")
             
-    elif choice == "2":
-        # Convert to CSV only
-        output_dir = None
-        if len(sys.argv) > 2:
-            output_dir = sys.argv[2]
-        else:
-            output_dir_input = input("Enter the output directory (leave blank for default): ")
-            if output_dir_input.strip() != "":
-                output_dir = output_dir_input
+#     elif choice == "2":
+#         # Convert to CSV only
+#         output_dir = None
+#         if len(sys.argv) > 2:
+#             output_dir = sys.argv[2]
+#         else:
+#             output_dir_input = input("Enter the output directory (leave blank for default): ")
+#             if output_dir_input.strip() != "":
+#                 output_dir = output_dir_input
         
-        result_dir, generated_files = convert_excel_to_csv(input_file, output_dir)
+#         result_dir, generated_files = convert_excel_to_csv(input_file, output_dir)
         
-        if result_dir:
-            print("\nProcess completed successfully.")
-            print(f"\nGenerated {len(generated_files)} CSV files plus RackList.csv")
-            print("\nTo use these CSV files in your Typst document:")
-            print(f"1. Save the io_tables.typ library to your Typst project")
-            print(f"2. Add this to your main Typst document:")
-            print(f"   #import \"io_tables.typ\": io-tables")
-            print(f"   #io-tables.generate-io-tables(\"{result_dir}\")")
-        else:
-            print("\nProcess failed.")
+#         if result_dir:
+#             print("\nProcess completed successfully.")
+#             print(f"\nGenerated {len(generated_files)} CSV files plus RackList.csv")
+#             print("\nTo use these CSV files in your Typst document:")
+#             print(f"1. Save the io_tables.typ library to your Typst project")
+#             print(f"2. Add this to your main Typst document:")
+#             print(f"   #import \"io_tables.typ\": io-tables")
+#             print(f"   #io-tables.generate-io-tables(\"{result_dir}\")")
+#         else:
+#             print("\nProcess failed.")
             
-    elif choice == "3":
-        # Extract IO List and then convert to CSV
-        processed_file = extract_io_list(input_file)
-        if not processed_file:
-            print("\nIO List extraction failed. Stopping process.")
-            return
+#     elif choice == "3":
+#         # Extract IO List and then convert to CSV
+#         processed_file = extract_io_list(input_file)
+#         if not processed_file:
+#             print("\nIO List extraction failed. Stopping process.")
+#             return
             
-        print("\nNow converting the processed file to CSV...")
+#         print("\nNow converting the processed file to CSV...")
         
-        output_dir = input("Enter the output directory for CSV files (leave blank for default): ")
-        if output_dir.strip() == "":
-            output_dir = None
+#         output_dir = input("Enter the output directory for CSV files (leave blank for default): ")
+#         if output_dir.strip() == "":
+#             output_dir = None
             
-        result_dir, generated_files = convert_excel_to_csv(processed_file, output_dir)
+#         result_dir, generated_files = convert_excel_to_csv(processed_file, output_dir)
         
-        if result_dir:
-            print("\nProcess completed successfully.")
-            print(f"\nGenerated {len(generated_files)} CSV files plus RackList.csv")
-            print("\nTo use these CSV files in your Typst document:")
-            print(f"1. Save the io_tables.typ library to your Typst project")
-            print(f"2. Add this to your main Typst document:")
-            print(f"   #import \"io_tables.typ\": io-tables")
-            print(f"   #io-tables.generate-io-tables(\"{result_dir}\")")
-        else:
-            print("\nCSV conversion failed.")
-    else:
-        print("Invalid choice. Please run the program again and select a valid option.")
+#         if result_dir:
+#             print("\nProcess completed successfully.")
+#             print(f"\nGenerated {len(generated_files)} CSV files plus RackList.csv")
+#             print("\nTo use these CSV files in your Typst document:")
+#             print(f"1. Save the io_tables.typ library to your Typst project")
+#             print(f"2. Add this to your main Typst document:")
+#             print(f"   #import \"io_tables.typ\": io-tables")
+#             print(f"   #io-tables.generate-io-tables(\"{result_dir}\")")
+#         else:
+#             print("\nCSV conversion failed.")
+#     else:
+#         print("Invalid choice. Please run the program again and select a valid option.")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
