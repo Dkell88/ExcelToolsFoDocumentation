@@ -1,15 +1,15 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from excelFunctions.ExtractIOandConvert import extract_io_list_by_rack, convert_excel_to_csv
-from excelFunctions.ExtractKeywords import extract_io_sheets_case_insensitive
-from ioToolset.ioToolset import extract_io_to_xml_imports
+from ExtractIOandConvert import extract_io_list_by_rack, convert_excel_to_csv
+from ExtractKeywords import extract_io_sheets_case_insensitive
+from ioToolset import extract_io_to_xml_imports
 
 
 app = Flask(__name__)
 CORS(app)
 
 @app.route('/extract_io_list_by_rack', methods=['POST'])
-def extract():
+def extract_io_list_by_rack():
     data = request.get_json(force=True)
     file_path = data.get('file_path')
     if not file_path:
@@ -21,7 +21,7 @@ def extract():
     return jsonify({'success': False}), 500
 
 @app.route('/convert_excel_to_csv', methods=['POST'])
-def convert():
+def convert_excel_to_csv():
     data = request.get_json(force=True)
     file_path = data.get('file_path')
     output_dir = data.get('output_dir')
@@ -35,7 +35,7 @@ def convert():
 
 
 @app.route('/extract_io_to_xml_imports', methods=['POST'])
-def convert():
+def extract_io_to_xml_imports():
     data = request.get_json(force=True)
     file_path = data.get('file_path')
     if not file_path:
@@ -47,7 +47,7 @@ def convert():
     return jsonify({'success': False}), 500
 
 @app.route('/extract_io_sheets_case_insensitive', methods=['POST'])
-def convert():
+def extract_io_sheets_case_insensitive():
     data = request.get_json(force=True)
     keywords = data.get('keywords')
     file_path = data.get('file_path')

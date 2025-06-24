@@ -54,27 +54,27 @@ def extract_io_sheets_case_insensitive(
     print(f"Wrote {len(keywords)} sheets to {output_xlsx}")
     return output_xlsx
     
+if __name__ == "__main__":
+    script_folder = Path(__file__).parent
+    backend_folder = script_folder.parent
+    excel_folder = backend_folder / "data" / "excel"
+    filename = "8083-041000-L-SL3-001-F Instrument List.xlsx"
+    excel_path = excel_folder / filename
+    print("Loading Excel from:", excel_path)
+    if not excel_path.exists():
+        raise FileNotFoundError(f"Couldn’t find the file at {excel_path!r}")
 
-script_folder = Path(__file__).parent
-backend_folder = script_folder.parent
-excel_folder = backend_folder / "data" / "excel"
-filename = "8083-041000-L-SL3-001-F Instrument List.xlsx"
-excel_path = excel_folder / filename
-print("Loading Excel from:", excel_path)
-if not excel_path.exists():
-    raise FileNotFoundError(f"Couldn’t find the file at {excel_path!r}")
+    keywords = ["HVAC Unit 1", "Take-Up", "HPU"]           # your list of keywords
+    input_file = excel_path
+    filename = "filtered_io_by_keyword.xlsx"
+    excel_folder = backend_folder / "data" / "excel" / "KeywordXlsx"
+    excel_path = excel_folder / filename
+    output_file = excel_path
 
-keywords = ["HVAC Unit 1", "Take-Up", "HPU"]           # your list of keywords
-input_file = excel_path
-filename = "filtered_io_by_keyword.xlsx"
-excel_folder = backend_folder / "data" / "excel" / "KeywordXlsx"
-excel_path = excel_folder / filename
-output_file = excel_path
-
-output_file = extract_io_sheets_case_insensitive(input_file, output_file)
-print(f"Wrote {len(keywords)} sheets to {output_file!r}")
-print(f" {len(keywords)} sheets to {output_file!r}")
-convert_excel_to_csv(output_file)
+    output_file = extract_io_sheets_case_insensitive(input_file, output_file)
+    print(f"Wrote {len(keywords)} sheets to {output_file!r}")
+    print(f" {len(keywords)} sheets to {output_file!r}")
+    convert_excel_to_csv(output_file)
 
 
 
