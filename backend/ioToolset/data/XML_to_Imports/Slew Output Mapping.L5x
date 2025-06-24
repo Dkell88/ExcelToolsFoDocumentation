@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.04" TargetName="R099_OutputBuffer" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="User'" ExportDate="Thu Aug 08 13:24:36 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+        <Controller Use="Context" Name="SL3">
+        <DataTypes Use="Context">
+        </DataTypes>
+
+        <Tags Use="Context">
+        <Tag Name="O_0704" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".0">
+        <![CDATA[Shiploader 3 Slew  Movement Warning Horn  - SL3-SLW-YA1]]>
+        </Comment>
+        <Comment Operand=".1">
+        <![CDATA[Shiploader 3 Slew Left Movement Warning Light  - SL3-SLW-YL1]]>
+        </Comment>
+        <Comment Operand=".2">
+        <![CDATA[Shiploader 3 Slew Right Movement Warning Light  - SL3-SLW-YL2]]>
+        </Comment>
+        <Comment Operand=".3">
+        <![CDATA[Shiploader 3 Slew Motor 1 Brake  - SL3-SLW-BK1]]>
+        </Comment>
+        <Comment Operand=".4">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 1 Solenoid Valve  - SL3-SLW-RC1-SV1]]>
+        </Comment>
+        <Comment Operand=".5">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 2 Solenoid Valve  - SL3-SLW-RC2-SV1]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        </Tags>
+        
+        <Programs Use="Context">
+            <Program Use="Context" Name="New Program" Class="Standard">
+            <Tags Use="Context">        
+                <Tag Name="SL3_SLW_YA1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew  Movement Warning Horn  - SL3-SLW-YA1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_YL1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Left Movement Warning Light  - SL3-SLW-YL1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_YL2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Right Movement Warning Light  - SL3-SLW-YL2]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_BK1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Motor 1 Brake  - SL3-SLW-BK1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_RC1_SV1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 1 Solenoid Valve  - SL3-SLW-RC1-SV1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_RC2_SV1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 2 Solenoid Valve  - SL3-SLW-RC2-SV1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                </Tags>
+        
+            <Routines Use="Context">
+                <Routine Use="Target" Name="R099_OutputBuffer" Type="RLL">
+                <RLLContent>
+            <Rung Number="0" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 07 Slot:04 Card: 1794-OA16
+                Located: SL3-SLW-RCP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="1" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_SLW_YA1)OTE(O_0704.0);]]>
+                </Text>
+            </Rung>
+			<Rung Number="2" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_SLW_YL1)OTE(O_0704.1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="3" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_SLW_YL2)OTE(O_0704.2);]]>
+                </Text>
+            </Rung>
+			<Rung Number="4" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_SLW_BK1)OTE(O_0704.3);]]>
+                </Text>
+            </Rung>
+			<Rung Number="5" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_SLW_RC1_SV1)OTE(O_0704.4);]]>
+                </Text>
+            </Rung>
+			<Rung Number="6" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_SLW_RC2_SV1)OTE(O_0704.5);]]>
+                </Text>
+            </Rung>
+
+                </RLLContent>
+                </Routine>
+            </Routines>
+            </Program>
+        </Programs>
+        </Controller>
+        </RSLogix5000Content>

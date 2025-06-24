@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.04" TargetName="R099_OutputBuffer" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="User'" ExportDate="Thu Aug 08 13:24:36 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+        <Controller Use="Context" Name="SL3">
+        <DataTypes Use="Context">
+        </DataTypes>
+
+        <Tags Use="Context">
+        <Tag Name="O_0112" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".0">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 1 Cooling  - SL3-MEH-HVAC1-R4]]>
+        </Comment>
+        <Comment Operand=".1">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 2 Cooling  - SL3-MEH-HVAC1-R5]]>
+        </Comment>
+        <Comment Operand=".2">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 1 Heat  - SL3-MEH-HVAC1-R6]]>
+        </Comment>
+        <Comment Operand=".3">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 2 Heat  - SL3-MEH-HVAC1-R7]]>
+        </Comment>
+        <Comment Operand=".8">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 1 Cooling  - SL3-MEH-HVAC2-R4]]>
+        </Comment>
+        <Comment Operand=".9">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 2 Cooling  - SL3-MEH-HVAC2-R5]]>
+        </Comment>
+        <Comment Operand=".10">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 1 Heat  - SL3-MEH-HVAC2-R6]]>
+        </Comment>
+        <Comment Operand=".11">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 2 Heat  - SL3-MEH-HVAC2-R7]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        
+        <Tag Name="O_0113" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".0">
+        <![CDATA[Shiploader 3 Boom Conveyor Bridge Left Side Start Warning Light  - SL3-BCB-YL1]]>
+        </Comment>
+        <Comment Operand=".1">
+        <![CDATA[Shiploader 3 Boom Conveyor Bridge Right Side Start Warning Light  - SL3-BCB-YL2]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        </Tags>
+        
+        <Programs Use="Context">
+            <Program Use="Context" Name="New Program" Class="Standard">
+            <Tags Use="Context">        
+                <Tag Name="SL3_MEH_HVAC1_R4" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 1 Cooling  - SL3-MEH-HVAC1-R4]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_HVAC1_R5" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 2 Cooling  - SL3-MEH-HVAC1-R5]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_HVAC1_R6" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 1 Heat  - SL3-MEH-HVAC1-R6]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_HVAC1_R7" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Stage 2 Heat  - SL3-MEH-HVAC1-R7]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_HVAC2_R4" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 1 Cooling  - SL3-MEH-HVAC2-R4]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_HVAC2_R5" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 2 Cooling  - SL3-MEH-HVAC2-R5]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_HVAC2_R6" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 1 Heat  - SL3-MEH-HVAC2-R6]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_HVAC2_R7" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Stage 2 Heat  - SL3-MEH-HVAC2-R7]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BCB_YL1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Conveyor Bridge Left Side Start Warning Light  - SL3-BCB-YL1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BCB_YL2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Conveyor Bridge Right Side Start Warning Light  - SL3-BCB-YL2]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                </Tags>
+        
+            <Routines Use="Context">
+                <Routine Use="Target" Name="R099_OutputBuffer" Type="RLL">
+                <RLLContent>
+            <Rung Number="0" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 01 Slot:12 Card: 1756-OA16
+                Located: SL3-MEH-ACP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="1" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC1_R4)OTE(O_0112.0);]]>
+                </Text>
+            </Rung>
+			<Rung Number="2" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC1_R5)OTE(O_0112.1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="3" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC1_R6)OTE(O_0112.2);]]>
+                </Text>
+            </Rung>
+			<Rung Number="4" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC1_R7)OTE(O_0112.3);]]>
+                </Text>
+            </Rung>
+			<Rung Number="5" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC2_R4)OTE(O_0112.8);]]>
+                </Text>
+            </Rung>
+			<Rung Number="6" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC2_R5)OTE(O_0112.9);]]>
+                </Text>
+            </Rung>
+			<Rung Number="7" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC2_R6)OTE(O_0112.10);]]>
+                </Text>
+            </Rung>
+			<Rung Number="8" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_HVAC2_R7)OTE(O_0112.11);]]>
+                </Text>
+            </Rung>
+
+            <Rung Number="9" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 01 Slot:13 Card: 1756-OA16
+                Located: SL3-MEH-ACP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="10" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BCB_YL1)OTE(O_0113.0);]]>
+                </Text>
+            </Rung>
+			<Rung Number="11" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BCB_YL2)OTE(O_0113.1);]]>
+                </Text>
+            </Rung>
+
+                </RLLContent>
+                </Routine>
+            </Routines>
+            </Program>
+        </Programs>
+        </Controller>
+        </RSLogix5000Content>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.04" TargetName="R001_InputBuffer" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="User'" ExportDate="Thu Aug 08 13:24:36 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+        <Controller Use="Context" Name="SL3">
+        <DataTypes Use="Context">
+        </DataTypes>
+
+        <Tags Use="Context">
+        <Tag Name="I_0105" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".0">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Power On Relay  - SL3-MEH-HVAC1-R1]]>
+        </Comment>
+        <Comment Operand=".1">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Lock Out Relay  - SL3-MEH-HVAC1-R2]]>
+        </Comment>
+        <Comment Operand=".2">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 1 Fan ON  - SL3-MEH-HVAC1-R3]]>
+        </Comment>
+        <Comment Operand=".5">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Power On Relay  - SL3-MEH-HVAC2-R1]]>
+        </Comment>
+        <Comment Operand=".6">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Lock Out Relay  - SL3-MEH-HVAC2-R2]]>
+        </Comment>
+        <Comment Operand=".7">
+        <![CDATA[Shiploader 3 Machine E-House HVAC Unit 2 Fan ON  - SL3-MEH-HVAC2-R3]]>
+        </Comment>
+        <Comment Operand=".10">
+        <![CDATA[Shiploader 3 Machine E-House Control Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS1-R1-1]]>
+        </Comment>
+        <Comment Operand=".11">
+        <![CDATA[Shiploader 3 Machine E-House Control Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS1-R1-2]]>
+        </Comment>
+        <Comment Operand=".12">
+        <![CDATA[Shiploader 3 Machine E-House Control Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS1-R1-3]]>
+        </Comment>
+        <Comment Operand=".13">
+        <![CDATA[Shiploader 3 Machine E-House Lighting Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS2-R1-1]]>
+        </Comment>
+        <Comment Operand=".14">
+        <![CDATA[Shiploader 3 Machine E-House Lighting Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS2-R1-2]]>
+        </Comment>
+        <Comment Operand=".15">
+        <![CDATA[Shiploader 3 Machine E-House Lighting Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS2-R1-3]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        </Tags>
+        
+        <Programs Use="Context">
+            <Program Use="Context" Name="New Program" Class="Standard">
+            <Tags Use="Context">        
+                <Tag Name="SL3_MEH_NCP1_UPS1_R1_1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House Control Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS1-R1-1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_NCP1_UPS1_R1_2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House Control Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS1-R1-2]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_NCP1_UPS1_R1_3" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House Control Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS1-R1-3]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_NCP1_UPS2_R1_1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House Lighting Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS2-R1-1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_NCP1_UPS2_R1_2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House Lighting Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS2-R1-2]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_NCP1_UPS2_R1_3" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Machine E-House Lighting Power UPS Alarm, Battery Low, Charging Relay  - SL3-MEH-NCP1-UPS2-R1-3]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                </Tags>
+        
+            <Routines Use="Context">
+                <Routine Use="Target" Name="R001_InputBuffer" Type="RLL">
+                <RLLContent>
+            <Rung Number="0" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 01 Slot:05 Card: 1756-IB16
+                Located: SL3-MEH-ACP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="1" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0105.10)OTE(SL3_MEH_NCP1_UPS1_R1_1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="2" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0105.11)OTE(SL3_MEH_NCP1_UPS1_R1_2);]]>
+                </Text>
+            </Rung>
+			<Rung Number="3" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0105.12)OTE(SL3_MEH_NCP1_UPS1_R1_3);]]>
+                </Text>
+            </Rung>
+			<Rung Number="4" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0105.13)OTE(SL3_MEH_NCP1_UPS2_R1_1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="5" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0105.14)OTE(SL3_MEH_NCP1_UPS2_R1_2);]]>
+                </Text>
+            </Rung>
+			<Rung Number="6" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0105.15)OTE(SL3_MEH_NCP1_UPS2_R1_3);]]>
+                </Text>
+            </Rung>
+
+                </RLLContent>
+                </Routine>
+            </Routines>
+            </Program>
+        </Programs>
+        </Controller>
+        </RSLogix5000Content>

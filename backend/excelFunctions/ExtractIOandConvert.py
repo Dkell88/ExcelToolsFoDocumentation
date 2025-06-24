@@ -38,7 +38,7 @@ def safe_convert_to_int(value):
         # If any conversion fails, just return string representation
         return str(value)
 
-def extract_io_list(input_file):
+def extract_io_list_by_rack(input_file):
     """
     Extracts data from the 'IO LIST' worksheet and creates a new Excel file
     with separate worksheets for each rack/slot combination.

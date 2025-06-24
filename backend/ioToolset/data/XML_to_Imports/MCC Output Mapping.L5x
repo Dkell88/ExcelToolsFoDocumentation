@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.04" TargetName="R099_OutputBuffer" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="User'" ExportDate="Thu Aug 08 13:24:36 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+        <Controller Use="Context" Name="SL3">
+        <DataTypes Use="Context">
+        </DataTypes>
+
+        <Tags Use="Context">
+        <Tag Name="O_0400" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".0">
+        <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 1  - SL3-MEH-CP1-C1]]>
+        </Comment>
+        <Comment Operand=".1">
+        <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 2  - SL3-MEH-CP1-C2]]>
+        </Comment>
+        <Comment Operand=".3">
+        <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 3  - SL3-MEH-CP1-C3]]>
+        </Comment>
+        <Comment Operand=".6">
+        <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 4  - SL3-MEH-CP1-C4]]>
+        </Comment>
+        <Comment Operand=".7">
+        <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 5  - SL3-MEH-CP1-C5]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        </Tags>
+        
+        <Programs Use="Context">
+            <Program Use="Context" Name="New Program" Class="Standard">
+            <Tags Use="Context">        
+                <Tag Name="SL3_MEH_CP1_C1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 1  - SL3-MEH-CP1-C1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_CP1_C2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 2  - SL3-MEH-CP1-C2]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_CP1_C3" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 3  - SL3-MEH-CP1-C3]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_CP1_C4" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 4  - SL3-MEH-CP1-C4]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_MEH_CP1_C5" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Electrical house PLC Auxiliary panel Lighting Contactor 5  - SL3-MEH-CP1-C5]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                </Tags>
+        
+            <Routines Use="Context">
+                <Routine Use="Target" Name="R099_OutputBuffer" Type="RLL">
+                <RLLContent>
+            <Rung Number="0" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 04 Slot:00 Card: 1794-OA16
+                Located: SL3-MEH-CP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="1" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_CP1_C1)OTE(O_0400.0);]]>
+                </Text>
+            </Rung>
+			<Rung Number="2" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_CP1_C2)OTE(O_0400.1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="3" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_CP1_C3)OTE(O_0400.3);]]>
+                </Text>
+            </Rung>
+			<Rung Number="4" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_CP1_C4)OTE(O_0400.6);]]>
+                </Text>
+            </Rung>
+			<Rung Number="5" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_MEH_CP1_C5)OTE(O_0400.7);]]>
+                </Text>
+            </Rung>
+
+                </RLLContent>
+                </Routine>
+            </Routines>
+            </Program>
+        </Programs>
+        </Controller>
+        </RSLogix5000Content>

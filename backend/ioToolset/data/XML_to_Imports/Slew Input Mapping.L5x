@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.04" TargetName="R001_InputBuffer" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="User'" ExportDate="Thu Aug 08 13:24:36 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+        <Controller Use="Context" Name="SL3">
+        <DataTypes Use="Context">
+        </DataTypes>
+
+        <Tags Use="Context">
+        <Tag Name="I_0702" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".12">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 1 Position Limit Switch  - SL3-SLW-RC1-ZLS1]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        
+        <Tag Name="I_0703" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".0">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 1  High Oil Temperature Switch  - SL3-SLW-RC1-TSHH1]]>
+        </Comment>
+        <Comment Operand=".1">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 1  Low Oil Level Switch  - SL3-SLW-RC1-LSLL1]]>
+        </Comment>
+        <Comment Operand=".2">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 2 Position Limit Switch  - SL3-SLW-RC2-ZLS1]]>
+        </Comment>
+        <Comment Operand=".3">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 2  High Oil Temperature Switch  - SL3-SLW-RC2-TSHH1]]>
+        </Comment>
+        <Comment Operand=".4">
+        <![CDATA[Shiploader 3 Slew Rail Clamp 2  Low Oil Level Switch  - SL3-SLW-RC2-LSLL1]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        </Tags>
+        
+        <Programs Use="Context">
+            <Program Use="Context" Name="New Program" Class="Standard">
+            <Tags Use="Context">        
+                <Tag Name="SL3_SLW_RC1_ZLS1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 1 Position Limit Switch  - SL3-SLW-RC1-ZLS1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_RC1_TSHH1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 1  High Oil Temperature Switch  - SL3-SLW-RC1-TSHH1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_RC1_LSLL1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 1  Low Oil Level Switch  - SL3-SLW-RC1-LSLL1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_RC2_ZLS1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 2 Position Limit Switch  - SL3-SLW-RC2-ZLS1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_RC2_TSHH1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 2  High Oil Temperature Switch  - SL3-SLW-RC2-TSHH1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_SLW_RC2_LSLL1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Slew Rail Clamp 2  Low Oil Level Switch  - SL3-SLW-RC2-LSLL1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                </Tags>
+        
+            <Routines Use="Context">
+                <Routine Use="Target" Name="R001_InputBuffer" Type="RLL">
+                <RLLContent>
+            <Rung Number="0" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 07 Slot:02 Card: 1794-IA16
+                Located: SL3-SLW-RCP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="1" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0702.12)OTE(SL3_SLW_RC1_ZLS1);]]>
+                </Text>
+            </Rung>
+
+            <Rung Number="2" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 07 Slot:03 Card: 1794-IA16
+                Located: SL3-SLW-RCP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="3" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0703.0)OTE(SL3_SLW_RC1_TSHH1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="4" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0703.1)OTE(SL3_SLW_RC1_LSLL1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="5" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0703.2)OTE(SL3_SLW_RC2_ZLS1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="6" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0703.3)OTE(SL3_SLW_RC2_TSHH1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="7" Type="N">
+                 <Text>
+                <![CDATA[XIC(I_0703.4)OTE(SL3_SLW_RC2_LSLL1);]]>
+                </Text>
+            </Rung>
+
+                </RLLContent>
+                </Routine>
+            </Routines>
+            </Program>
+        </Programs>
+        </Controller>
+        </RSLogix5000Content>

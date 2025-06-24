@@ -39,8 +39,10 @@ function App() {
       <button onClick={handleSelectFile}>Select Excel File</button>
       {filePath && <p>Selected file: {filePath}</p>}
       <div style={{ marginTop: '0.5rem' }}>
-            <button onClick={() => callApi('extract')}>Extract IO List</button>
-            <button onClick={() => callApi('convert')} style={{ marginLeft: '0.5rem' }}>Convert to CSV</button>
+            <button onClick={() => callApi('extract_io_list_by_rack')}>Extract IO List Into Racks</button>
+            <button onClick={() => callApi('convert_excel_to_csv')} style={{ marginLeft: '0.5rem' }}>Convert Excel files to CSV</button>
+            <button onClick={() => callApi('extract_io_to_xml_imports')} style={{ marginLeft: '0.5rem' }}>Extract IO List and Convert to XML for Import</button>
+            <button onClick={() => callApi('extract_io_sheets_case_insensitive')} style={{ marginLeft: '0.5rem' }}>Extrct IO sheets based on Keywords</button>
       </div>
       <p>{message}</p>
     </div>

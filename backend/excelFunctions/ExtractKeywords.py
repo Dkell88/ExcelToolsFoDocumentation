@@ -6,42 +6,53 @@ from ExtractIOandConvert import convert_excel_to_csv
 
 
 def extract_io_sheets_case_insensitive(
-    keywords: List[str],
     excel_path: Path,
     output_xlsx: Path
 ) -> Path:
     """
-    Reads the "IO LIST" sheet from `excel_path` and for each keyword:
-      • Filters rows where column Q (index 16) contains the keyword, case-insensitive.
-      • Extracts columns C,D,E,H,K,Q (positions 2,3,4,7,10,16).
-      • Writes each filtered set to its own worksheet in a timestamped Excel file.
-    Returns the Path to that timestamped file.
+    1) Reads keywords from "Equipmnet Keywords" (column A).
+    2) Loads "IO LIST" sheet.
+    3) If output_xlsx exists, renames it to include a timestamp (_YYYYMMDD_HHMMSS).
+    4) Writes a new .xlsx at output_xlsx, one sheet per keyword (case-insensitive filter on column Q).
+    5) Returns the Path to the newly created output_xlsx.
     """
-    # 1) Load the source sheet
+    # --- 1) Extract keywords ---
+    df_kw = pd.read_excel(excel_path, sheet_name="Equipment Keywords", dtype=str)
+    keywords = (
+        df_kw.iloc[:, 0]
+             .dropna()
+             .astype(str)
+             .str.strip()
+             .tolist()
+    )
+
+    # --- 2) Load IO LIST ---
     df = pd.read_excel(excel_path, sheet_name="IO LIST", dtype=str)
 
-    # 2) Build a timestamp string
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    # --- 3) Archive existing output if needed ---
+    if output_xlsx.exists():
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        stem, suffix = output_xlsx.stem, output_xlsx.suffix
+        archived = output_xlsx.with_name(f"{stem}_{ts}{suffix}")
+        output_xlsx.rename(archived)
+        print(f"Archived existing file as {archived}")
 
-    # 3) Insert it before the extension
-    stem, suffix = output_xlsx.stem, output_xlsx.suffix
-    timestamped = output_xlsx.with_name(f"{stem}_{ts}{suffix}")
-
-    # 4) Write out each keyword as its own sheet    
-    with pd.ExcelWriter(timestamped, engine="openpyxl") as writer:
+    # --- 4) Write new workbook ---
+    with pd.ExcelWriter(output_xlsx, engine="openpyxl") as writer:
         for kw in keywords:
             col_q = df.iloc[:, 16].fillna("")
             mask = col_q.str.contains(kw, case=False, na=False)
-            cols_idx = [2, 3, 4, 7, 10, 16]
+
+            cols_idx = [2, 3, 4, 7, 10, 16]  # C,D,E,H,K,Q
             filtered = df.loc[mask, :].iloc[:, cols_idx]
             filtered.columns = ["C", "D", "E", "H", "K", "Q"]
 
-            # Sanitize sheet name
+            # sanitize sheet name
             safe = "".join(ch for ch in kw if ch.isalnum())[:31] or "Sheet"
             filtered.to_excel(writer, sheet_name=safe, index=False)
 
-    print(f"Wrote {len(keywords)} sheets to {timestamped!r}")
-    return timestamped
+    print(f"Wrote {len(keywords)} sheets to {output_xlsx}")
+    return output_xlsx
     
 
 script_folder = Path(__file__).parent
@@ -53,14 +64,14 @@ print("Loading Excel from:", excel_path)
 if not excel_path.exists():
     raise FileNotFoundError(f"Couldn’t find the file at {excel_path!r}")
 
-keywords = ["HVAC", "Take-Up", "HPU"]           # your list of keywords
+keywords = ["HVAC Unit 1", "Take-Up", "HPU"]           # your list of keywords
 input_file = excel_path
 filename = "filtered_io_by_keyword.xlsx"
 excel_folder = backend_folder / "data" / "excel" / "KeywordXlsx"
 excel_path = excel_folder / filename
 output_file = excel_path
 
-output_file = extract_io_sheets_case_insensitive(keywords, input_file, output_file)
+output_file = extract_io_sheets_case_insensitive(input_file, output_file)
 print(f"Wrote {len(keywords)} sheets to {output_file!r}")
 print(f" {len(keywords)} sheets to {output_file!r}")
 convert_excel_to_csv(output_file)

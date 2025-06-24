@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.04" TargetName="R099_OutputBuffer" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="User'" ExportDate="Thu Aug 08 13:24:36 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+        <Controller Use="Context" Name="SL3">
+        <DataTypes Use="Context">
+        </DataTypes>
+
+        <Tags Use="Context">
+        <Tag Name="O_1106" Class="Standard" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+            <Comments>
+                
+        <Comment Operand=".0">
+        <![CDATA[Shiploader 3 Boom Hoist  Start Warning Horn  - SL3-BH-YA1]]>
+        </Comment>
+        <Comment Operand=".1">
+        <![CDATA[Shiploader 3 Boom Hoist  Start Warning Light  - SL3-BH-YL1]]>
+        </Comment>
+        <Comment Operand=".2">
+        <![CDATA[Shiploader 3 Boom Hoist Motor 1 Heater  - SL3-BH-M1-HE1]]>
+        </Comment>
+        <Comment Operand=".3">
+        <![CDATA[Shiploader 3 Boom Hoist Motor 2 Heater  - SL3-BH-M2-HE1]]>
+        </Comment>
+        <Comment Operand=".4">
+        <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 1 Brake Release Valve  - SL3-BH-HPU1-SV1]]>
+        </Comment>
+        <Comment Operand=".5">
+        <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 1 Brake Release Valve  - SL3-BH-HPU1-SV2]]>
+        </Comment>
+        <Comment Operand=".6">
+        <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 2 Brake Release Valve  - SL3-BH-HPU2-SV1]]>
+        </Comment>
+        <Comment Operand=".7">
+        <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 2 Brake Release Valve  - SL3-BH-HPU2-SV2]]>
+        </Comment>
+            </Comments>
+            <Data Format="L5K">
+            <![CDATA[0]]>
+            </Data>
+            <Data Format="Decorated">
+            <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+            </Data>
+        </Tag>
+        </Tags>
+        
+        <Programs Use="Context">
+            <Program Use="Context" Name="New Program" Class="Standard">
+            <Tags Use="Context">        
+                <Tag Name="SL3_BH_YA1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist  Start Warning Horn  - SL3-BH-YA1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BH_YL1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist  Start Warning Light  - SL3-BH-YL1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BH_M1_HE1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist Motor 1 Heater  - SL3-BH-M1-HE1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BH_M2_HE1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist Motor 2 Heater  - SL3-BH-M2-HE1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BH_HPU1_SV1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 1 Brake Release Valve  - SL3-BH-HPU1-SV1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BH_HPU1_SV2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 1 Brake Release Valve  - SL3-BH-HPU1-SV2]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BH_HPU2_SV1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 2 Brake Release Valve  - SL3-BH-HPU2-SV1]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                        
+                <Tag Name="SL3_BH_HPU2_SV2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+                <Description>
+                <![CDATA[Shiploader 3 Boom Hoist Emergency Brake HPU 2 Brake Release Valve  - SL3-BH-HPU2-SV2]]>
+                </Description>
+                <Data Format="L5K">
+                <![CDATA[0]]>
+                </Data>
+                <Data Format="Decorated">
+                <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+                </Data>
+                </Tag>
+                </Tags>
+        
+            <Routines Use="Context">
+                <Routine Use="Target" Name="R099_OutputBuffer" Type="RLL">
+                <RLLContent>
+            <Rung Number="0" Type="N">
+                <Comment>
+                <![CDATA[********************************
+                Rack: 11 Slot:06 Card: 1794-OA16
+                Located: SL3-BH-RCP1
+                ********************************]]>
+                </Comment>
+                <Text>
+                <![CDATA[ nop();]]>
+                </Text>
+            </Rung>
+			<Rung Number="1" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_YA1)OTE(O_1106.0);]]>
+                </Text>
+            </Rung>
+			<Rung Number="2" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_YL1)OTE(O_1106.1);]]>
+                </Text>
+            </Rung>
+			<Rung Number="3" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_M1_HE1)OTE(O_1106.2);]]>
+                </Text>
+            </Rung>
+			<Rung Number="4" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_M2_HE1)OTE(O_1106.3);]]>
+                </Text>
+            </Rung>
+			<Rung Number="5" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_HPU1_SV1)OTE(O_1106.4);]]>
+                </Text>
+            </Rung>
+			<Rung Number="6" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_HPU1_SV2)OTE(O_1106.5);]]>
+                </Text>
+            </Rung>
+			<Rung Number="7" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_HPU2_SV1)OTE(O_1106.6);]]>
+                </Text>
+            </Rung>
+			<Rung Number="8" Type="N">
+                <Text>
+                <![CDATA[XIC(SL3_BH_HPU2_SV2)OTE(O_1106.7);]]>
+                </Text>
+            </Rung>
+
+                </RLLContent>
+                </Routine>
+            </Routines>
+            </Program>
+        </Programs>
+        </Controller>
+        </RSLogix5000Content>

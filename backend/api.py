@@ -1,23 +1,26 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from backend.functions.ExtractIOandConvert import extract_io_list, convert_excel_to_csv
+from excelFunctions.ExtractIOandConvert import extract_io_list_by_rack, convert_excel_to_csv
+from excelFunctions.ExtractKeywords import extract_io_sheets_case_insensitive
+from ioToolset.ioToolset import extract_io_to_xml_imports
+
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/extract', methods=['POST'])
+@app.route('/extract_io_list_by_rack', methods=['POST'])
 def extract():
     data = request.get_json(force=True)
     file_path = data.get('file_path')
     if not file_path:
         return jsonify({'error': 'file_path is required'}), 400
 
-    output_file = extract_io_list(file_path)
+    output_file = extract_io_list_by_rack(file_path)
     if output_file:
         return jsonify({'success': True, 'output_file': output_file})
     return jsonify({'success': False}), 500
 
-@app.route('/convert', methods=['POST'])
+@app.route('/convert_excel_to_csv', methods=['POST'])
 def convert():
     data = request.get_json(force=True)
     file_path = data.get('file_path')
@@ -30,6 +33,33 @@ def convert():
         return jsonify({'success': True, 'output_dir': result_dir, 'files': generated_files})
     return jsonify({'success': False}), 500
 
+
+@app.route('/extract_io_to_xml_imports', methods=['POST'])
+def convert():
+    data = request.get_json(force=True)
+    file_path = data.get('file_path')
+    if not file_path:
+        return jsonify({'error': 'file_path is required'}), 400
+
+    result_dir, generated_files = extract_io_to_xml_imports(file_path)
+    if result_dir:
+        return jsonify({'success': True, 'output_dir': result_dir, 'files': generated_files})
+    return jsonify({'success': False}), 500
+
+@app.route('/extract_io_sheets_case_insensitive', methods=['POST'])
+def convert():
+    data = request.get_json(force=True)
+    keywords = data.get('keywords')
+    file_path = data.get('file_path')
+    output_dir = data.get('output_dir')
+    if not file_path:
+        return jsonify({'error': 'file_path is required'}), 400
+
+    result_dir, generated_files = extract_io_sheets_case_insensitive(keywords, file_path, output_dir)
+    if result_dir:
+        return jsonify({'success': True, 'output_dir': result_dir, 'files': generated_files})
+    return jsonify({'success': False}), 500
+
+
 if __name__ == '__main__':
     app.run(port=5000)
-
